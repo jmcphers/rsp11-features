@@ -1,3 +1,71 @@
+---
+title: "RStudio Server Pro 1.1"
+subtitle: "New Features"
+author: "Jonathan McPherson"
+date: "2018.02.02"
+output: 
+  revealjs::revealjs_presentation:
+    theme: night
+    transition: slide
+---
+
+```{r setup, echo=FALSE}
+library(DiagrammeR)
+```
+
 # RStudio Server Pro 1.1
 
+# Agenda
+
+## For Data Scientists
+
+- Session Management
+- Session Cleanup
+
+## For Admins
+
+- Notifications
+- Session Cleanup
+- Licensing in Docker/VMs
+
+# Data Scientists
+
+## Label Sessions
+
+![session label](img/label-session.png)
+
+## Label Sessions
+
+![session labels](img/labelled-sessions.png)
+
+## Cleanup Sessions
+
+![session cleanup](img/select-sessions.png)
+
+# Admins
+
+## Session Cleanup
+
+    session-timeout-kill-hours=168
+
+- Prevent runaway resource usage
+- Clean up old sessions and recover their disk space.
+
+## Notifications
+
+![notifications](img/admin-notifications.png)
+
+## Notifications
+
+    /etc/rstudio/notifications.conf
+
+- Set message start time/end time
+- Notification will be delivered to each user session
+- Scriptable
+
+## Licensing in Docker / VMs
+
+```{r, echo=FALSE}
+grViz(diagram = "gv/turboactivate.gv")
+```
 
