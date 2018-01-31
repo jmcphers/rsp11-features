@@ -41,17 +41,43 @@ library(DiagrammeR)
 
 ![session cleanup](img/select-sessions.png)
 
+## Session Info
+
+![info](img/session-sizes.png)
+
+## Summary
+
+- Label sessions for easy access
+- Select multiple sessions for cleanup
+- Force-quit sessions when necessary
+- Session size info for estimating resume time
+
 # Admins
+
+## Session Multiplication
+
+- Home directory space is often constrained
+- Users don't take time to clean up sessions
+- Sessions can be very large
 
 ## Session Cleanup
 
-- Fully clean up old, unused sessions
-- Prevent runaway resource usage
+- Fully clean up unused sessions
 - Recover disk space
 
 ## Session Cleanup
 
     session-timeout-kill-hours=168
+
+## Session Cleanup Caveats
+
+- Unused sessions means "user interaction"
+- Force-kill is used; set timeout accordingly
+- Users can lose unsaved data
+
+## Notifications
+
+*How do you communicate impending maintenance or other downtime?*
 
 ## Notifications
 
@@ -72,6 +98,11 @@ library(DiagrammeR)
     Message: The server will go down tonight from 10pm to 12am
         for maintenance.
 
+## Licensing in Containers/VMs
+
+- RSP License bound to physical hardware
+- Must deactivate and re-activate when moving hardware
+
 ## Activating in Containers
 
 ```{r, echo=FALSE, fig.width=10, fig.height=6}
@@ -80,6 +111,7 @@ grViz(diagram = "gv/turboactivate.gv")
 
 ## Container/VM Activation Challenges
 
+- License tied to hardware
 - Internet access required inside containers
 - Keys required inside containers
 - License lost if container deleted w/o deactivate
@@ -95,6 +127,7 @@ grViz(diagram = "gv/turbofloat.gv")
 - No license needed in containers (just address of server)
 - No internet access needed in containers
 - OK if container destroyed/deleted unexpectantly
+- Available in other RStudio products, too
 
 ## First Project Template
 
@@ -102,8 +135,25 @@ grViz(diagram = "gv/turbofloat.gv")
 - Provide a template for common tasks
 - Supply examples of correct code and style
 
-## First Project Temlate
+## First Project Template
 
     session-first-project-template-path=/etc/rstudio/welcome-project
+
+## First Project Template
+
+![first](img/new-project.png)
+
+## First Project Template
+
+- Copied to home directory on first login
+- Opened in first user session
+- Can control which files are opened in tabs
+
+## Summary
+
+- Clean up resources from old sessions
+- Give users timly notifications
+- License with confidence in containers and VMs
+- Get new users started on the right foot
 
 # Q & A

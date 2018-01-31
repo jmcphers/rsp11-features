@@ -7,11 +7,11 @@ digraph tf {
   subgraph cluster_rsp {
       subgraph cluster_0 {
           r1 [label = "Run"];
-          label = "Container 1";
+          label = "Server 1";
       }
       subgraph cluster_1 {
           r2 [label = "Run"];
-          label = "Container 2";
+          label = "Server 2";
       }
   }
   

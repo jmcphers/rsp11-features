@@ -10,7 +10,7 @@ digraph ta {
           a1 [label = "Activate"];
           r1 [label = "Run"];
           d1 [label = "Deactivate"];
-          label = "Container 1";
+          label = "Server 1";
           a1 -> r1 -> d1;
       }
       subgraph cluster_1 {
@@ -18,7 +18,7 @@ digraph ta {
           a2 [label = "Activate"];
           r2 [label = "Run"];
           d2 [label = "Deactivate"];
-          label = "Container 2";
+          label = "Server 2";
           a2 -> r2 -> d2;
       }
   }
